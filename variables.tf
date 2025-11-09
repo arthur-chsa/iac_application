@@ -9,6 +9,12 @@ variable "region" {
   default     = "europe-west3"
 }
 
+variable "google_credentials" {
+  description = "GCP credentials in JSON format"
+  type        = string
+  sensitive   = true
+}
+
 variable "instance_name" {
   description = "Cloud SQL instance name"
   type        = string
