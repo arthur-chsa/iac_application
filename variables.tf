@@ -1,52 +1,46 @@
 variable "project_id" {
-  description = "GCP project ID"
   type        = string
+  description = "GCP project ID"
 }
 
 variable "region" {
-  description = "Region where Cloud SQL will be created"
   type        = string
-  default     = "europe-west3"
+  description = "GCP region"
 }
 
 variable "google_credentials" {
-  description = "GCP credentials in JSON format"
   type        = string
+  description = "GCP credentials JSON"
   sensitive   = true
 }
 
 variable "instance_name" {
-  description = "Cloud SQL instance name"
   type        = string
-  default     = "mysql-instance"
+  description = "Cloud SQL instance name"
 }
 
 variable "tier" {
-  description = "Machine type tier (e.g. db-f1-micro, db-custom-1-3840)"
   type        = string
-  default     = "db-f1-micro"
+  description = "Cloud SQL machine tier (e.g., db-custom-1-3840, db-f1-micro)"
 }
 
 variable "authorized_cidr" {
-  description = "CIDR block allowed to connect (for example your IP)"
   type        = string
-  default     = "0.0.0.0/0"
+  description = "CIDR block authorized for database access"
 }
 
 variable "database_name" {
-  description = "Database name to create"
   type        = string
-  default     = "app_db"
+  description = "Database name"
 }
 
 variable "db_user" {
-  description = "Database username"
   type        = string
-  default     = "app_user"
+  description = "Database user name"
 }
 
 variable "db_password" {
-  description = "Database user password"
   type        = string
+  description = "Database user password"
   sensitive   = true
 }

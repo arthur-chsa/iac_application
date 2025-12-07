@@ -1,18 +1,3 @@
-terraform {
-  required_providers {
-    google = {
-      source  = "hashicorp/google"
-      version = "~> 6.0"
-    }
-  }
-}
-
-provider "google" {
-  project     = var.project_id
-  region      = var.region
-  credentials = var.google_credentials
-}
-
 # ---- Cloud SQL MySQL Instance ----
 resource "google_sql_database_instance" "mysql_instance" {
   name             = var.instance_name
